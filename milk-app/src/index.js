@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Login from './SignIn';
 import reportWebVitals from './reportWebVitals';
 import * as firebase from "firebase/app";
 
@@ -21,6 +22,7 @@ firebase.default.initializeApp(firebaseConfig);
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
