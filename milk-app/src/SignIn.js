@@ -8,27 +8,17 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-// import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { ReactComponent as Logo } from './logo.svg';
-
-function logo() {
-  return (
-    <div>
-      {/* Logo is an actual React component */}
-      <Logo />
-    </div>
-  );
-}
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Direitos reservados © '}
+      {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Nosso Leite
+        Your Website
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -38,7 +28,7 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -54,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-  logo: {
-    width: '60%',
-  }
 }));
 
 export default function SignIn() {
@@ -66,16 +53,12 @@ export default function SignIn() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        { <Logo className={classes.logo}>
-          <Logo />
-        </Logo> }
-        {/* { <Avatar className={classes.avatar}>
-          <Logo />
+        <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
-        </Avatar> } */}
-        {/* <Typography component="h1" variant="h5">
-          Entrar
-        </Typography> */}
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign in
+        </Typography>
         <form className={classes.form} noValidate>
           <TextField
             variant="outlined"
@@ -83,7 +66,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label="Endereço de Email"
+            label="Email Address"
             name="email"
             autoComplete="email"
             autoFocus
@@ -94,14 +77,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Senha"
+            label="Password"
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Lembre-me"
+            label="Remember me"
           />
           <Button
             type="submit"
@@ -110,17 +93,17 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Entrar
+            Sign In
           </Button>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
-                Esqueceu a senha?
+                Forgot password?
               </Link>
             </Grid>
             <Grid item>
               <Link href="#" variant="body2">
-                {"Não tem uma conta? Cadastre-se"}
+                {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
@@ -132,23 +115,3 @@ export default function SignIn() {
     </Container>
   );
 }
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// import React from 'react';
-// import { Button } from '@material-ui/core';
-
-{/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-
-
-function App() {
-  return <Button color="secondary">Insper Vacathon 2020</Button>;
-  
-}
-
-export default App; */}
-
-
-
