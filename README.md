@@ -1,13 +1,13 @@
-# vacathon-2020
+# Vacathon-2020
 Time 2 do Insper
 
 Professor orientador: Marcelo Hashimoto
 
 Alunos(as)
-- Fabrício
-- Gustavo
+- Fabrício Neri Lima
+- Gustavo Piegas
 - Isadora Stigliani Dalberto
 - Rodrigo Coelho
-- Wilgner
+- Wilgner Lopes
 
 Aplicativo programado com React 
