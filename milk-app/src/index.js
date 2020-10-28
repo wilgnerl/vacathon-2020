@@ -24,12 +24,7 @@ firebase.default.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
-    <Router>
-      <Switch>
-        <Route exact path="/" component={App}/>
-      </Switch>
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

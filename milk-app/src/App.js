@@ -1,13 +1,22 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import './App.css';
-
-// { <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+import Login from './SignIn';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Tela_inicial from './Tela_inicial';
 
 
 function App() {
-  return <Button color="secondary">Insper Vacathon 2020</Button>;
-  
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Login}/>
+          <Route path="/tela_inicial" component={Tela_inicial}/>
+        </Switch>
+      </div>
+    </Router>
+    );
 }
 
 export default App;

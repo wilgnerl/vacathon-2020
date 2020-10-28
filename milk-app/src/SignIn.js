@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { ReactComponent as Logo } from './logo.svg';
-import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
+import { Link as Link_Router} from "react-router-dom";
 
 function logo() {
   return (
@@ -107,16 +107,17 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Lembre-me"
           />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Entrar
-          </Button>
-          
+          <Link_Router to="/tela_inicial">
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Entrar
+            </Button>
+          </Link_Router>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
