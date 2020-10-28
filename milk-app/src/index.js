@@ -5,6 +5,9 @@ import App from './App';
 import Login from './SignIn';
 import reportWebVitals from './reportWebVitals';
 import * as firebase from "firebase/app";
+// import { Switch } from '@material-ui/core';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDAakGtZnsBWA5wtMVDLnSJMJi0Yqnb_-g",
@@ -21,8 +24,12 @@ firebase.default.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
     <Login />
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App}/>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

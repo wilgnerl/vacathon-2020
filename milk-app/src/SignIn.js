@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { ReactComponent as Logo } from './logo.svg';
+import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
 
 function logo() {
   return (
@@ -112,6 +113,7 @@ export default function SignIn() {
           >
             Entrar
           </Button>
+          
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
