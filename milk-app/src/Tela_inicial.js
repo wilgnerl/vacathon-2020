@@ -5,22 +5,28 @@ import { Link as Link_Router} from "react-router-dom";
 
 function Tela_inicial() {
     return (
+      <div class="tudo">
+
       <Link_Router to="/">
-      <Button
+        <Button
         fullWidth
         variant="contained"
         color="primary"
         >
         Voltar
-      </Button>
-      <Button
+        </Button>
+      </Link_Router>
+      <Link_Router to="/Tela_inicial2">
+
+        <Button
         fullWidth
         variant="contained"
         color="primary"
         >
         Tela2
-      </Button>
-    </Link_Router>
+        </Button>
+      </Link_Router>
+    </div>
   );
 }
 
