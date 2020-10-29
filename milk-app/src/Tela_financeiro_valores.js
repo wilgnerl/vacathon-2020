@@ -61,11 +61,14 @@ export default function ControlledOpenSelect() {
             onOpen={handleOpen}
             value={age}
             onChange={handleChange}
-            defaultValue={{value:5}}
+            value={age}
+            displayEmpty
+            className={classes.selectEmpty}
+            inputProps={{ 'aria-label': 'Without label' }}
           >
             <MenuItem value={1}>Janeiro</MenuItem>
             <MenuItem value={2}>Fevereiro</MenuItem>
-            <MenuItem value={3}>Março</MenuItem>
+            <MenuItem value="">Março</MenuItem>
             <MenuItem value={4}>Abril</MenuItem>
             <MenuItem value={5}>Maio</MenuItem>
             <MenuItem value={6}>Junho</MenuItem>
