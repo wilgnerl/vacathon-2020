@@ -14,28 +14,35 @@ export default function Tela_vacas() {
         <h4 style={{opacity:'50%'}}>Aqui você encontra os dados de todas as vacas da fazenda, dividias em 4 categorias:</h4>
         <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
             <ul style={{textAlign:'left'}}>
-                <li><h2>Lactação</h2></li>
+                <li><h2>Em lactação</h2></li>
             </ul>
             <ul>
-                <li><h2>12</h2></li>
+                <li><h2>14</h2></li>
+            </ul>
+        </div>
+        <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", opacity:'50%'}}>
+            <ul style={{textAlign:'left'}}>
+                <li><h4 style={{margin:'0', marginLeft:'0.2rem'}}>Em lactação vazias</h4></li>
+            </ul>
+            <ul>
+                <li><h4 style={{margin:'0'}}>6</h4></li>
+            </ul>
+        </div>
+        <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", opacity:'50%'}}>
+            <ul style={{textAlign:'left'}}>
+                <li><h4 style={{margin:'0.2rem', marginBottom:'1rem'}}>Em lactacão prenhes</h4></li>
+            </ul>
+            <ul>
+                <li><h4 style={{margin:'0', marginBottom:'1rem'}}>8</h4></li>
             </ul>
         </div>
         <Divider/>
         <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
             <ul style={{textAlign:'left'}}>
-                <li><h2>Entrepartos</h2></li>
+                <li><h2>Seca</h2></li>
             </ul>
             <ul>
-                <li><h2>3</h2></li>
-            </ul>
-        </div>
-        <Divider/>
-        <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-            <ul style={{textAlign:'left'}}>
-                <li><h2>Prenha</h2></li>
-            </ul>
-            <ul>
-                <li><h2>3</h2></li>
+                <li><h2>4</h2></li>
             </ul>
         </div>
         <Divider/>
@@ -53,7 +60,7 @@ export default function Tela_vacas() {
                 <li><h2>Total</h2></li>
             </ul>
             <ul>
-                <li><h2>22</h2></li>
+                <li><h2>21</h2></li>
             </ul>
         </div>
         <Divider/>

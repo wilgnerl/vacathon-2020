@@ -117,7 +117,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação vazia
                 </Typography>
                 {}
                 </React.Fragment>
@@ -161,7 +161,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação prenhe
                 </Typography>
                 {}
                 </React.Fragment>
@@ -208,7 +208,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação vazia
                 </Typography>
                 {}
                 </React.Fragment>
@@ -230,7 +230,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação prenhe
                 </Typography>
                 {}
                 </React.Fragment>
@@ -296,7 +296,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Entrepartos
+                    Estado: Seca
                 </Typography>
                 {}
                 </React.Fragment>
@@ -318,7 +318,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação vazia
                 </Typography>
                 {}
                 </React.Fragment>
@@ -340,7 +340,7 @@ export default function Tela_lista_vacas() {
                     className={classes.inline}
                     color="textPrimary"
                 >
-                    Estado: Lactação
+                    Estado: Lactação vazia
                 </Typography>
                 {}
                 </React.Fragment>
