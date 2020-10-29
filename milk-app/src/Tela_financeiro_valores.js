@@ -48,9 +48,7 @@ export default function ControlledOpenSelect() {
       setOpen(true);
     };
   
-    const messs = 'Janeiro';
     return (
-
         <div className={classes.paper}>
         
         
@@ -63,13 +61,14 @@ export default function ControlledOpenSelect() {
             onOpen={handleOpen}
             value={age}
             onChange={handleChange}
-            defaultValue={{value:5}}
+            value={age}
+            displayEmpty
+            className={classes.selectEmpty}
+            inputProps={{ 'aria-label': 'Without label' }}
           >
             <MenuItem value={1}>Janeiro</MenuItem>
             <MenuItem value={2}>Fevereiro</MenuItem>
-            <Link_Router to="/Tela_financeiro_valores">
-              <MenuItem value={3}>Março</MenuItem>
-            </Link_Router>
+            <MenuItem value="">Março</MenuItem>
             <MenuItem value={4}>Abril</MenuItem>
             <MenuItem value={5}>Maio</MenuItem>
             <MenuItem value={6}>Junho</MenuItem>
@@ -83,9 +82,9 @@ export default function ControlledOpenSelect() {
         </FormControl>
 
         <div>
-            <p>Saldo: R$0,00</p>
-            <p>Gastos: R$0,00</p>
-            <p>Ganhos: R$0,00</p>
+            <p>Saldo: R$5.072,94</p>
+            <p>Gastos: R$986,21</p>
+            <p>Ganhos: R$1.344,80</p>
         </div>
 
     {/* <Link_Router to="/"> */}

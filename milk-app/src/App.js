@@ -36,6 +36,7 @@ function App() {
           <Route path="/tela_inicial2" component={Tela_inicial2}/>
           <Route path="/Tela_financeiro" component={Tela_financeiro}/>
           <Route path="/Tela_relatorio" component={tela_relatorio}/>
+          <Route path='/Tela_financeiro_valores' component={Tela_financeiro_valores}/>
         </Switch>
       </div>
     </Router>
