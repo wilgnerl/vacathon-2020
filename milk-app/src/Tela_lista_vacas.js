@@ -11,6 +11,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { Link as Link_Router} from "react-router-dom";
+import Header from './Header'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
   },
   aumentar: {
       fontSize: "2rem",
+  },
+  botao_voltar: {
+    marginTop: '4.5rem',
+    height: '5vh',
+    fontWeight: "bolder",
+    fontSize: '10px',
+    alignSelf: 'left'
   }
 }));
 
@@ -31,6 +39,21 @@ export default function Tela_lista_vacas() {
 
   return (
     <Container>
+        <Header></Header>
+        <div style={{display:'flex', flexDirection:'row'}}>
+        <Link_Router to="/tela_vacas_2">
+            <Button
+              className={classes.botao_voltar}
+              type="submit"
+              variant="contained"
+              color="primary"
+              >
+                Voltar
+            </Button>
+        </Link_Router>
+        <h2 style={{marginTop:'4.5rem', marginLeft:'2rem', marginBottom:'1rem'}}>Lista de Vacas</h2>
+        </div>
+        <Divider component='hr'/>
         <div style={{display:"flex", flexDirection:"row"}}>
         <TextField 
                 variant="outlined"
@@ -40,7 +63,7 @@ export default function Tela_lista_vacas() {
                 name="litros"
                 autoFocus
                 size= 'large'
-                marginTop='2'
+                marginTop='1'
                 marginRigth='1'
                 />
         <Button
@@ -144,8 +167,10 @@ export default function Tela_lista_vacas() {
                 </React.Fragment>
             }
             />
+        
         </ListItem>
         <Divider variant="inset" component="li" />
+        <Link_Router component='a' to='./tela_info_vaca'>
         <ListItem alignItems="flex-start">
             <ListItemAvatar>
             <Avatar src="https://www.flaticon.com/svg/static/icons/svg/676/676208.svg" variant='square' />
@@ -167,6 +192,7 @@ export default function Tela_lista_vacas() {
             }
             />
         </ListItem>
+        </Link_Router>
         <Divider variant="inset" component="li" />
         <ListItem alignItems="flex-start">
             <ListItemAvatar>

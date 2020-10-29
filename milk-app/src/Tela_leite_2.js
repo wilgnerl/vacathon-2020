@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import {Button, Divider} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-//import Cow from './cow.png';
-//import Icon from './avanco-rapido (1).png'
+import Icon from './avanco-rapido (1).png'
 import { Link as Link_Router} from "react-router-dom";
 import { Container } from '@material-ui/core';
 import Header from './Header'
@@ -12,13 +11,9 @@ const useStyles = makeStyles((theme ) => ({
             
         },
         texto: {
-            marginBottom: 10,
-            fontSize: 35,
             textAlign: 'center',
         },
         texto2: {
-            marginBottom: 10,
-            fontSize: 35,
             textAlign: 'center',
         },
 
@@ -27,14 +22,12 @@ const useStyles = makeStyles((theme ) => ({
             textAlign: 'center',
         },
         botao: {
-            marginTop: 40,
-            display: 'flex',
-
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
-        
-                
+            height: '8vh',
+            fontWeight: "bolder",
+            fontSize: '15px',
+            alignSelf: 'flex-end',
+            marginBottom: '1rem'
+          },
     })
 );
 
@@ -44,34 +37,49 @@ export default function Text(theme) {
     return (
       <Container>
       <Header></Header>
+      <h1 style={{marginTop:'4rem'}}>Informações sobre o seu leite</h1>
       <div className={classes.root}>
-        <h6 className={classes.texto} >Produção de hoje:</h6>
+        <h2 className={classes.texto} >Produção de hoje:</h2>
         <p className={classes.info} >27 Litros</p>
 
-        <h6 className={classes.texto2} >Armazenamento:</h6>
+        <h2 className={classes.texto2} >Armazenamento:</h2>
         <p className={classes.info} >224 Litros</p>
         <div className={classes.botao}>
             <Link_Router to="/tela_evento_leite">
-                <Button variant="contained" style={{backgroundColor:'#C2E0F2', width:300, fontWeight:'bold', padding:'1rem'}} disableElevation size='large' fullwidht='True'>
-                    Cadastrar evento
-                </Button>
+            <Button
+              className={classes.botao}
+              type="submit"
+              variant="contained"
+              color="primary"
+              >
+                Cadastrar evento
+            </Button>
             </Link_Router>
         </div>
+        <Divider></Divider>
         <div className='status' style={{borderStyle:'solid',
+                                        borderColor: '#FFFFFF',
                                          marginLeft:8,
                                           marginRight:8,
-                                           marginTop:10,
+
+                                           marginBottom:15,
                                                                                    
                                            }}>
 
             <h4 style={{display:'flex', justifyContent:'center'}}>
-                Vacas com problemas
+                Vacas com problemas:
             </h4>
             <div className='infovaca' style={{display:'flex',
                                               justifyContent:'space-around'}}>
-                {/* <img src={Cow}/>
-                <p>Mimosa 27</p>
-                <img src={Icon}/> */}
+                <img src='https://www.flaticon.com/svg/static/icons/svg/676/676208.svg' style={{marginBottom:'0.8rem', width:'50px', height:'50px'}}/>
+                <p>Vaca 32</p>
+                <img src={Icon} style={{width:'50px', height:'50px'}}/>
+            </div>
+            <div className='infovaca' style={{display:'flex',
+                                              justifyContent:'space-around'}}>
+                <img src='https://www.flaticon.com/svg/static/icons/svg/676/676208.svg' style={{marginBottom:'0.8rem', width:'50px', height:'50px'}}/>
+                <p>Vaca 27</p>
+                <img src={Icon} style={{width:'50px', height:'50px'}}/>
             </div>
         </div>
       </div>

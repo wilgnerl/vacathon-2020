@@ -84,7 +84,7 @@ export default function SearchAppBar() {
               alignItems:'center',
             marginLeft:120,backgroundColor:'#73B2D9'}}
       >
-        Modulos
+        Módulos
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -94,39 +94,24 @@ export default function SearchAppBar() {
         onClose={handleClose}
       >
         <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
           <Link_Router to="/tela_leite_1">
           <ListItemText primary="Leite" />
           </Link_Router>
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
-          <Link_Router to="/tela_vacas">
+          <Link_Router to="/tela_vacas_1">
           <ListItemText primary="Vacas" />
           </Link_Router>
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
           <Link_Router to="/tela_financeiro">
           <ListItemText primary="Financeiro" />
           </Link_Router>
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
           <ListItemText primary="Reprodução" />
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
           <ListItemText primary="Education" />
         </StyledMenuItem>
       </StyledMenu>
