@@ -14,6 +14,7 @@ import Header from './Header'
 import Tela_leite_1 from './Tela_leite_1'
 import Tela_leite_2 from './Tela_leite_2'
 import Tela_cadastro_vaca from './Tela_cadastro_vaca'
+import Tela_financeiro_zerada from './Tela_financeiro_zerada'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/tela_info_vaca" component={Tela_info_vaca}/>
           <Route path="/tela_inicial2" component={Tela_inicial2}/>
           <Route path="/Tela_financeiro" component={Tela_financeiro}/>
+          <Route path='/Tela_financeiro_zerada' component={Tela_financeiro_zerada}/>
         </Switch>
       </div>
     </Router>

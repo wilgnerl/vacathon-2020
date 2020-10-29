@@ -79,9 +79,9 @@ export default function ControlledOpenSelect() {
         </FormControl>
 
         <div>
-            <p>Saldo: R$0,00</p>
-            <p>Gastos: R$0,00</p>
-            <p>Ganhos: R$0,00</p>
+            <p>Saldo: R$5.072,94</p>
+            <p>Gastos: R$986,21</p>
+            <p>Ganhos: R$1.344,80</p>
         </div>
 
     {/* <Link_Router to="/"> */}
