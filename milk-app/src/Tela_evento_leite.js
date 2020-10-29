@@ -66,22 +66,22 @@ export default function BasicTextFields() {
       <h3 className={classes.descricao}>Precisamos de apenas duas informações aqui: qual o número de identificação da sua vaca e quanto de leite ela produziu hoje.</h3>
       <TextField 
             className={classes.texto}
-            variant="outlined"
+            variant="standard"
             margin="normal"
-            required
             fullWidth
             id="numero_vaca"
             label="Número do brinco "
+            type='number'
             name="brinco"
             autoFocus />
       <TextField 
-            variant="outlined"
+            variant="standard"
             margin="normal"
-            required
             fullWidth
             id="numero_vaca"
             label="Litros de leite "
             name="litros"
+            type='number'
             autoFocus
             size= 'large'
              />

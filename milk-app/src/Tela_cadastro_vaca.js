@@ -8,6 +8,11 @@ import TextField from '@material-ui/core/TextField';
 import { RoundedCorner } from '@material-ui/icons';
 import { Link as Link_Router} from "react-router-dom";
 import Header from "./Header"
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'flex-end'
   },
   texto: {
-    marginTop: '1rem'
+    marginTop: '1rem',
+    width: '95%'
   },
   botao_voltar: {
     marginTop: '4rem',
@@ -40,11 +46,24 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bolder",
     fontSize: '10px',
     alignSelf: 'left'
-  }
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    width: '95%',
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
 }));
 
 export default function BasicTextFields() {
   const classes = useStyles();
+
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
   return (
     <Container>
@@ -66,55 +85,76 @@ export default function BasicTextFields() {
       <h3 className={classes.descricao}>Para cadastrar um animal, basta preencher esse 5 campos.</h3>
       <TextField 
             className={classes.texto}
-            variant="outlined"
+            variant="standard"
             margin="normal"
             fullWidth
             id="numero_vaca"
             label="Número do brinco"
+            type="number"
             name="brinco"
             autoFocus />
       <TextField 
-            variant="outlined"
+            className={classes.texto}
+            variant="standard"
             margin="normal"
             fullWidth
-            id="numero_vaca"
+            id="data_nascimento"
+            type="date"
             label="Data Nascimento"
-            name="litros"
             autoFocus
             size= 'large'
+            InputLabelProps={{ shrink: true }}
              />
-        <TextField 
+        <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-label">Raça</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Holandesa</MenuItem>
+          <MenuItem value={20}>Jersey</MenuItem>
+          <MenuItem value={30}>Pardo Suiço</MenuItem>
+          <MenuItem value={40}>Zebu Leiteiras</MenuItem>
+          <MenuItem value={50}>Gir</MenuItem>
+          <MenuItem value={60}>Guzerá</MenuItem>
+          <MenuItem value={70}>Sindi</MenuItem>
+          <MenuItem value={80}>Girolando</MenuItem>
+          <MenuItem value={90}>Outro</MenuItem>
+        </Select>
+      </FormControl>
+      <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Em lactação prenhe</MenuItem>
+          <MenuItem value={20}>Em lactação vazia</MenuItem>
+          <MenuItem value={30}>Seca</MenuItem>
+          <MenuItem value={40}>Prenhe</MenuItem>
+          <MenuItem value={50}>Bezerro</MenuItem>
+          
+        </Select>
+      </FormControl>
+      <TextField 
             className={classes.texto}
-            variant="outlined"
-            margin="normal"
-            fullWidth
-            id="numero_vaca"
-            label="Raça"
-            name="brinco"
-            autoFocus />
-        <TextField 
-            className={classes.texto}
-            variant="outlined"
-            margin="normal"
-            fullWidth
-            id="numero_vaca"
-            label="Categoria"
-            name="brinco"
-            autoFocus />
-        <TextField 
-            className={classes.texto}
-            variant="outlined"
+            variant="standard"
             margin="normal"
             fullWidth
             id="numero_vaca"
             label="Peso "
+            type="Number"
             name="brinco"
             autoFocus />
         <Link_Router to="/tela_vacas_2">
           <Button
               className={classes.botao}
               type="submit"
-              fullWidth
+              width='100%'
               variant="contained"
               color="primary"
               >
