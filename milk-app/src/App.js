@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './SignIn';
 import Tela_inicial from './Tela_inicial';
 import Tela_evento_leite from './Tela_evento_leite';
-import Tela_vacas from './Tela_vacas';
+import Tela_vacas_1 from './Tela_vacas_1';
+import Tela_vacas_2 from './Tela_vacas_2';
 import Tela_lista_vacas from './Tela_lista_vacas';
 import Tela_info_vaca from './Tela_info_vaca';
 import Tela_inicial2 from './Tela_inicial2';
@@ -28,7 +29,8 @@ function App() {
           <Route path="/tela_cadastro_vaca" exact component={Tela_cadastro_vaca}/>
           <Route path="/tela_inicial" component={Tela_inicial}/>
           <Route path="/tela_evento_leite" component={Tela_evento_leite}/>
-          <Route path="/tela_vacas" component={Tela_vacas}/>
+          <Route path="/tela_vacas_1" component={Tela_vacas_1}/>
+          <Route path="/tela_vacas_2" component={Tela_vacas_2}/>
           <Route path="/tela_lista_vacas" component={Tela_lista_vacas}/>
           <Route path="/tela_info_vaca" component={Tela_info_vaca}/>
           <Route path="/tela_inicial2" component={Tela_inicial2}/>

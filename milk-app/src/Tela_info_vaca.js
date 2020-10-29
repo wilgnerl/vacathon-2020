@@ -25,13 +25,34 @@ const useStyles = makeStyles((theme) => ({
     },
     aumentar: {
         fontSize: "2rem",
-    }
+    },
+    botao_voltar: {
+        marginTop: '4rem',
+        height: '5vh',
+        fontWeight: "bolder",
+        fontSize: '10px',
+        alignSelf: 'left'
+      }
   }));
 
 function Tela_info_vaca() {
     const classes = useStyles();
   return (
     <Container>
+        <div style={{display:'flex', flexDirection:'row', alignSelf:'flex-start', marginBottom:'0.7rem'}}>
+            <Link_Router to="/tela_lista_vacas">
+                <Button
+                className={classes.botao_voltar}
+                type="submit"
+                variant="contained"
+                color="primary"
+                >
+                    Voltar
+                </Button>
+            </Link_Router>
+            <h2 style={{marginTop:'4rem', marginLeft:'2rem', marginBottom:'0'}}>Informações</h2>
+        </div>
+        <Divider></Divider>
         <div style={{display:"flex", flexDirection:"row"}}>
         <List className={classes.root}>
         <ListItem alignItems="flex-start">
@@ -40,7 +61,7 @@ function Tela_info_vaca() {
             </ListItemAvatar>
             <ListItemText
             alignItems='center'
-            primary="Número: 039"
+            primary="Número: 032"
             secondary={
                 <React.Fragment className={classes.aumentar}>
                 <Typography
