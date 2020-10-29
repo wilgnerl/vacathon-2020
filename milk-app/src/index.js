@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import * as firebase from "firebase/app";
 // import { Switch } from '@material-ui/core';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Header from "./Header"
 
 
 const firebaseConfig = {
@@ -24,6 +25,7 @@ firebase.default.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
+    <Header />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
