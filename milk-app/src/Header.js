@@ -1,10 +1,8 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-
 import { makeStyles } from '@material-ui/core/styles';
-
-
+import { Link as Link_Router} from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -74,6 +72,7 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar  style={{backgroundColor:'#73B2D9'}}>
         <Toolbar>
+          
         <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
@@ -98,13 +97,25 @@ export default function SearchAppBar() {
           <ListItemIcon>
             <InboxIcon fontSize="small" />
           </ListItemIcon>
+          <Link_Router to="/tela_leite_1">
           <ListItemText primary="Leite" />
+          </Link_Router>
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
             <InboxIcon fontSize="small" />
           </ListItemIcon>
+          <Link_Router to="/tela_vacas">
+          <ListItemText primary="Vacas" />
+          </Link_Router>
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <InboxIcon fontSize="small" />
+          </ListItemIcon>
+          <Link_Router to="/tela_financeiro">
           <ListItemText primary="Financeiro" />
+          </Link_Router>
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>

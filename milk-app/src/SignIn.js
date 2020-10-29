@@ -107,7 +107,7 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Lembre-me"
           />
-          <Link_Router to="/tela_inicial">
+          <Link_Router to="/tela_leite_1">
             <Button
               type="submit"
               fullWidth
