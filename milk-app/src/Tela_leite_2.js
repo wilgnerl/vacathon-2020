@@ -73,13 +73,13 @@ export default function Text(theme) {
                                               justifyContent:'space-around'}}>
                 <img src='https://www.flaticon.com/svg/static/icons/svg/676/676208.svg' style={{marginBottom:'0.8rem', width:'50px', height:'50px'}}/>
                 <p>Vaca 32</p>
-                <img src={Icon} style={{width:'50px', height:'50px'}}/>
+                <img src='https://www.flaticon.com/svg/static/icons/svg/1665/1665608.svg' style={{width:'25px', height:'25px', marginTop:'0.8rem'}}/>
             </div>
             <div className='infovaca' style={{display:'flex',
                                               justifyContent:'space-around'}}>
                 <img src='https://www.flaticon.com/svg/static/icons/svg/676/676208.svg' style={{marginBottom:'0.8rem', width:'50px', height:'50px'}}/>
                 <p>Vaca 27</p>
-                <img src={Icon} style={{width:'50px', height:'50px'}}/>
+                <img src='https://www.flaticon.com/svg/static/icons/svg/1665/1665608.svg' style={{width:'25px', height:'25px', marginTop:'0.8rem'}}/>
             </div>
         </div>
       </div>

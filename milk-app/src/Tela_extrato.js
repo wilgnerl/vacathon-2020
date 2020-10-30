@@ -16,6 +16,8 @@ import { red } from '@material-ui/core/colors';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { BrowserRouter } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "2rem",
   },
   botao_voltar: {
-    marginTop: '0rem',
     height: '5vh',
     fontWeight: "bolder",
     fontSize: '10px',
-    alignSelf: 'left'
+    alignSelf: 'left',
+    marginBottom:0
   },
   valor:{
     color:'#FF0000'
@@ -68,8 +70,7 @@ export default function Tela_extrato() {
 
   return (
     <List className={classes.root}>
-      <Header/>
-      <div style={{display:'flex', flexDirection:'row', marginTop:'4rem', marginLeft:'0.5rem'}}>
+        <div style={{display:'flex', flexDirection:'row', marginTop:'4rem', marginLeft:'0.5rem'}}>
             <Link_Router to='./tela_financeiro_valores'>
             <Button
               className={classes.botao_voltar}
@@ -80,8 +81,9 @@ export default function Tela_extrato() {
                 Voltar
             </Button>
             </Link_Router>
-        <h2 style={{marginTop:'0', marginLeft:'4rem', marginBottom:'2rem'}}>Relatório</h2>
+        <h2 style={{marginTop:'0', marginLeft:'4rem', marginBottom:'2rem'}}>Extrato</h2>
       </div>
+      <Header/>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
         <h2 className={classes.mes}> Mês: </h2>
         <FormControl className={classes.formControl}>
@@ -97,8 +99,8 @@ export default function Tela_extrato() {
           >
             <MenuItem value={1}>Janeiro</MenuItem>
             <MenuItem value={2}>Fevereiro</MenuItem>
-            <Link_Router to='./tela_relatorio_valores'>
-              <MenuItem value={3}>Março</MenuItem>
+            <Link_Router to='/tela_extrato_valores'>
+                <MenuItem value={3}>Março</MenuItem>
             </Link_Router>
             <MenuItem value={4}>Abril</MenuItem>
             <MenuItem value={5}>Maio</MenuItem>
@@ -112,7 +114,8 @@ export default function Tela_extrato() {
           </Select>
         </FormControl>
         </div>
-        
       </List>
+      
+      
     );
 }

@@ -13,6 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { Link as Link_Router} from "react-router-dom";
+import Header from './Header'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -39,6 +40,7 @@ function Tela_info_vaca() {
     const classes = useStyles();
   return (
     <Container>
+        <Header/>
         <div style={{display:'flex', flexDirection:'row', alignSelf:'flex-start', marginBottom:'0.7rem'}}>
             <Link_Router to="/tela_lista_vacas">
                 <Button

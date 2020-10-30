@@ -56,20 +56,16 @@ export default function BasicTextFields() {
   const classes = useStyles();
 
   const [age, setAge] = React.useState('');
-  const [age1, setAge1] = React.useState('');
 
   const handleChange = (event) => {
     setAge(event.target.value);
-  };
-  const handleChange1 = (event) => {
-    setAge1(event.target.value);
   };
 
   return (
     <Container>
     <Header></Header>
     <div style={{display:'flex', alignSelf:'flex-start'}}>
-      <Link_Router to="/tela_vacas_1">
+      <Link_Router to="/tela_financeiro_2">
       <Button
               className={classes.botao_voltar}
               type="submit"
@@ -81,64 +77,27 @@ export default function BasicTextFields() {
       </Link_Router>
     </div>
     <form className={classes.root} noValidate autoComplete="off">
-      <h1 className={classes.titulo}>Cadastrar vaca</h1>
-      <h3 className={classes.descricao}>Para cadastrar um animal, basta preencher esse 5 campos.</h3>
-      <TextField 
-            className={classes.texto}
-            variant="standard"
-            margin="normal"
-            fullWidth
-            id="numero_vaca"
-            label="Número do brinco"
-            type="number"
-            name="brinco"
-            autoFocus />
-      <TextField 
-            className={classes.texto}
-            variant="standard"
-            margin="normal"
-            fullWidth
-            id="data_nascimento"
-            type="date"
-            placeholder="DD MMMM YYYY"
-            label="Data Nascimento"
-            autoFocus
-            size= 'large'
-            InputLabelProps={{ shrink: true }}
-             />
+      <h1 className={classes.titulo}>Cadastrar evento financeiro</h1>
+      <h3 className={classes.descricao}>Para cadastrar um evento financeiro, precisamos saber sua categoria, valor e algumas particularidades.</h3>
         <FormControl className={classes.formControl}>
-        <InputLabel id="raca">Raça</InputLabel>
+        <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
         <Select
-          labelId="raca"
-          id="raca"
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
           value={age}
           onChange={handleChange}
         >
-          <MenuItem value={10}>Holandesa</MenuItem>
-          <MenuItem value={20}>Jersey</MenuItem>
-          <MenuItem value={30}>Pardo Suiço</MenuItem>
-          <MenuItem value={40}>Zebu Leiteiras</MenuItem>
-          <MenuItem value={50}>Gir</MenuItem>
-          <MenuItem value={60}>Guzerá</MenuItem>
-          <MenuItem value={70}>Sindi</MenuItem>
-          <MenuItem value={80}>Girolando</MenuItem>
-          <MenuItem value={90}>Outro</MenuItem>
-        </Select>
-      </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel id="cat">Categoria</InputLabel>
-        <Select
-          labelId="cat"
-          id="cat"
-          value={age1}
-          onChange={handleChange1}
-        >
-          <MenuItem value={10}>Em lactação prenhe</MenuItem>
-          <MenuItem value={20}>Em lactação vazia</MenuItem>
-          <MenuItem value={30}>Seca</MenuItem>
-          <MenuItem value={40}>Prenhe</MenuItem>
-          <MenuItem value={50}>Bezerro</MenuItem>
-          
+          <MenuItem value={10}>Ração</MenuItem>
+          <MenuItem value={20}>Veterinário</MenuItem>
+          <MenuItem value={30}>Vermífugo</MenuItem>
+          <MenuItem value={40}>Combustível</MenuItem>
+          <MenuItem value={50}>Conta</MenuItem>
+          <MenuItem value={60}>Salários</MenuItem>
+          <Link_Router to='./tela_evento_financeiro_leite'>
+            <MenuItem value={70}>Venda de leite</MenuItem>
+          </Link_Router>
+          <MenuItem value={80}>Venda de gado</MenuItem>
+          <MenuItem value={90}>Venda de adubo</MenuItem>
         </Select>
       </FormControl>
       <TextField 
@@ -147,11 +106,11 @@ export default function BasicTextFields() {
             margin="normal"
             fullWidth
             id="numero_vaca"
-            label="Peso "
+            label="Valor (R$) "
             type="Number"
-            name="brinco"
+            name="Valor"
             autoFocus />
-        <Link_Router to="/tela_vacas_2">
+        <Link_Router to="/tela_financeiro_valores">
           <Button
               className={classes.botao}
               type="submit"
@@ -159,7 +118,7 @@ export default function BasicTextFields() {
               variant="contained"
               color="primary"
               >
-                Adicionar vaca
+                Adicionar evento
           </Button>
         </Link_Router>
     </form>

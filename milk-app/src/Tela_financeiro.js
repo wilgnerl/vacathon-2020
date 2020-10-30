@@ -9,6 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { CenterFocusStrong } from '@material-ui/icons';
+import Header from './Header'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -22,11 +23,24 @@ const useStyles = makeStyles((theme) => ({
     button: {
       display: 'block',
       marginTop: theme.spacing(2),
+      fontWeight:'bolder',
+      fontSize:'20px',
+      width:'100%'
+    },
+    button1: {
+      display: 'block',
+      marginTop: theme.spacing(2),
+      fontWeight:'bolder',
+      fontSize:'20px',
+      marginTop:'5rem'
     },
     formControl: {
       margin: theme.spacing(2),
       minWidth: 160,
     },
+    espaco: {
+      marginTop:'5rem'
+    }
   }));
 
   
@@ -48,12 +62,11 @@ export default function ControlledOpenSelect() {
       setOpen(true);
     };
   
-    const messs = 'Janeiro';
     return (
-
         <div className={classes.paper}>
-        
-        
+        <Header/>
+        <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
+        <h3>Mês: </h3>
         <FormControl className={classes.formControl}>
           <Select
             labelId="demo-controlled-open-select-label"
@@ -81,32 +94,24 @@ export default function ControlledOpenSelect() {
             <MenuItem value={12}>Dezembro</MenuItem>
           </Select>
         </FormControl>
-
-        <div>
-            <p>Saldo: R$0,00</p>
-            <p>Gastos: R$0,00</p>
-            <p>Ganhos: R$0,00</p>
+        </div>
+        <div className={classes.espaco}>
+            <h2>Gastos: R$0,00</h2>
+            <h2>Ganhos: R$0,00</h2>
+            <h2>Saldo: R$0,00</h2>
         </div>
 
-    {/* <Link_Router to="/"> */}
+    <Link_Router to="/tela_evento_financeiro">
       <Button 
-        className={classes.button}
+        className={classes.button1}
         fullWidth
         variant="contained"
         color="primary"
       >
-        Cadastrar
+        Cadastrar evento
       </Button>
-    {/* </Link_Router> */}
-
-      <Button
-        className={classes.button}
-        fullWidth
-        variant="contained"
-        color="primary"
-      >
-        Relatório
-      </Button>
+      </Link_Router>
+      <Link_Router to="/tela_extrato">
       <Button
         className={classes.button}
         fullWidth
@@ -115,6 +120,18 @@ export default function ControlledOpenSelect() {
       >
         Extrato
       </Button>
+      </Link_Router>
+      <Link_Router to="/tela_relatorio">
+      <Button
+        className={classes.button}
+        fullWidth
+        variant="contained"
+        color="primary"
+      >
+        Relatório
+      </Button>
+      </Link_Router>
+      
       </div>
     );
   }

@@ -42,7 +42,7 @@ export default function Tela_vacas() {
                 <li><h2>Seca</h2></li>
             </ul>
             <ul>
-                <li><h2>4</h2></li>
+                <li><h2>3</h2></li>
             </ul>
         </div>
         <Divider/>
@@ -51,7 +51,7 @@ export default function Tela_vacas() {
                 <li><h2>Bezerros</h2></li>
             </ul>
             <ul>
-                <li><h2>4</h2></li>
+                <li><h2>5</h2></li>
             </ul>
         </div>
         <Divider/>
@@ -60,7 +60,7 @@ export default function Tela_vacas() {
                 <li><h2>Total</h2></li>
             </ul>
             <ul>
-                <li><h2>21</h2></li>
+                <li><h2>22</h2></li>
             </ul>
         </div>
         <Divider/>

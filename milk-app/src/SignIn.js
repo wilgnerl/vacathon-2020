@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     width: '60%',
+    marginTop:'2rem'
   }
 }));
 
@@ -118,18 +119,10 @@ export default function SignIn() {
               Entrar
             </Button>
           </Link_Router>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Esqueceu a senha?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Não tem uma conta? Cadastre-se"}
-              </Link>
-            </Grid>
-          </Grid>
+          <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', margin:'0'}}>
+            <p>Esqueceu a senha?</p>
+            <p>Cadastrar-se? </p>
+          </div>
         </form>
       </div>
       <Box mt={8}>

@@ -70,7 +70,7 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar  style={{backgroundColor:'#73B2D9'}}>
+      <AppBar  style={{backgroundColor:'#73b2d9'}}>
         <Toolbar>
           
         <Button
@@ -81,15 +81,15 @@ export default function SearchAppBar() {
         onClick={handleClick}
         style={{display:'flex',
                 justifyContent:'center',
-              alignItems:'center',
-            marginLeft:120,backgroundColor:'#73B2D9'}}
+              alignItems:'center',backgroundColor:'#73b2d9',
+          width:'100%', fontWeight:'bold', fontSize:'18px'}}
       >
         Módulos
       </Button>
       <StyledMenu
         id="customized-menu"
         anchorEl={anchorEl}
-        keepMounted
+        //keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
@@ -112,7 +112,7 @@ export default function SearchAppBar() {
           <ListItemText primary="Reprodução" />
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemText primary="Education" />
+          <ListItemText primary="Educação" />
         </StyledMenuItem>
       </StyledMenu>
           
